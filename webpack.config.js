@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js", // the main JavaScript file of the app/project
+  entry: "./client/src/index.js", // the main JavaScript file of the app/project
   output: {
     // instructions for compiling the code
     path: path.resolve("dist"), // the file where the compiled code should go
@@ -25,7 +25,7 @@ module.exports = {
   },
   devServer: {
     // instructions for the development server
-    contentBase: path.resolve("src"), // location of the source code
+    contentBase: path.resolve("client/src"), // location of the source code
     hot: true, // refresh the browser when changes are saved
     open: true, // open the app/project in the browser when the server starts
     port: 8000, // use this port for the server
@@ -37,7 +37,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(), // update changed modules without page reload
     new HtmlWebpackPlugin({
       // add JavaScript code to the HTML
-      template: "public/index.html",
+      template: "client/public/index.html",
       filename: "index.html",
       inject: "body",
     }),
