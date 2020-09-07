@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import DetailsCard from './DetailsCard'
 
 
 class HabitCard extends Component {
@@ -11,7 +10,7 @@ class HabitCard extends Component {
                 <h2>Streak: {this.props.streak}</h2>
                 <button>Complete</button>
                 <button>More Info</button>
-                <Link to= {`/details/${this.props.id}`}>link</Link>
+                <Link to= {`/details/${this.props.idx}`}>link</Link>
             </div>
         )
     }
