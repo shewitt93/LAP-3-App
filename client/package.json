@@ -26,6 +26,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "html-webpack-plugin": "^4.3.0",
     "jest": "^26.2.2",
+    "redux-devtools-extension": "^2.13.8",
     "sinon": "^9.0.2",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
@@ -37,6 +38,8 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   }
 }
