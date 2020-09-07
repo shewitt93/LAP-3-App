@@ -3,17 +3,16 @@ DROP TABLE IF EXISTS users;
 
 CREATE TABLE users(
     id serial PRIMARY KEY,
-    name_id int NOT NULL,
     username VARCHAR(20) NOT NULL,
     user_password VARCHAR(50) NOT NULL
     
 );
 
-INSERT INTO users (name_id, username, user_password) VALUES
-    (1, 'Simon', 'enneneneenene'),
-    (2, 'Atheer', 'hello'),
-    (3, 'Mugisha', 'good'),
-    (4, 'Jamie', 'morning')
+INSERT INTO users (username, user_password) VALUES
+    ('Simon', 'enneneneenene'),
+    ('Atheer', 'hello'),
+    ('Mugisha', 'good'),
+    ('Jamie', 'morning')
 ;
 
 
