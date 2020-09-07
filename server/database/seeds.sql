@@ -25,7 +25,7 @@ CREATE TABLE activities(
     description VARCHAR(500),
     streak int NOT NULL,
     latest_date date NOT NULL,
-    name_id int NOT NULL
+    name_id int REFERENCES users (name_id)  NOT NULL
 );
 
 INSERT INTO activities (name, description, streak, latest_date, name_id) VALUES 
