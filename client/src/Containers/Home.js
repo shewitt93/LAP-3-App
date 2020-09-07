@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
+import HabitCard from '../Components/HabitCard'
 
 class Home extends Component {
     render() {
         return (
-            <div>
-                <h1>{this.props.appState.name}</h1>
-            </div>
+            <>
+                <h1>{this.props.appState.name}'s Dashboard</h1>
+                {this.props.appState.habits.map((habit, idx) => <HabitCard key={idx} name={habit.name} streak={habit.streak}/> )}
+            </>
         )
     }
 }
