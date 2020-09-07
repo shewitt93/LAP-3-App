@@ -10,5 +10,5 @@ server.use(express.json());
 
 const port = process.env.PORT || 3000;
 
-server.get('/', (req, res) => res.send('Hi!'))
-server.listen(port, () => console.log(`App listening on http:localhost:${port}`))
+server.get('/', (req, res) => res.send('Server Running'))
+server.listen(port, () => console.log(`App listening on http://localhost:${port}/`))
