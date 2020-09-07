@@ -7,7 +7,7 @@ class Dashboard extends Component {
         return (
             <>
                 <h1>{this.props.appState.name}'s Dashboard</h1>
-                {this.props.appState.habits.map((habit, idx) => <HabitCard key={idx} name={habit.name} streak={habit.streak}/> )}
+                {this.props.appState.habits.map((habit, idx) => <HabitCard id={habit.id} key={idx} name={habit.name} streak={habit.streak}/> )}
                 <button>Complete All</button>
             </>
         )
