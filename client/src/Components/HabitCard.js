@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+
 
 class HabitCard extends Component {
     render() {
@@ -14,5 +14,4 @@ class HabitCard extends Component {
     }
 }
 
-const mSTP = state => ({ appState: state.user })
-export default connect(mSTP)(HabitCard)
+export default HabitCard;
