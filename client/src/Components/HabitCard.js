@@ -9,8 +9,8 @@ class HabitCard extends Component {
                 <h2>Habit Name: {this.props.name}</h2>
                 <h2>Streak: {this.props.streak}</h2>
                 <button>Complete</button>
-                <button>More Info</button>
-                <Link to= {`/details/${this.props.idx}`}>link</Link>
+                <button><Link to= {`/details/${this.props.idx}`}>More Info</Link></button>
+                
             </div>
         )
     }
