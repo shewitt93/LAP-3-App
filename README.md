@@ -9,4 +9,4 @@
 - In new repo run `npm start`
 
 ## Collaborators
-[@MugishaU](https://github.com/MugishaU), [@shewitt93](https://github.com/shewitt93),[@atheermusa](https://github.com/atheermusa)
+[@MugishaU](https://github.com/MugishaU), [@shewitt93](https://github.com/shewitt93),[@atheermusa](https://github.com/atheermusa), [@JamieSear](https://github.com/JamieSear)
