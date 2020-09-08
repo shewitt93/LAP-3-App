@@ -6,6 +6,8 @@ import DetailsCard from "./Components/DetailsCard";
 import NavBar from "./Components/NavBar"
 import Profile from "./Containers/Profile";
 import NotFound404 from "./Containers/NotFound404"
+import Login from "./Containers/Login";
+import NewHabit from "./Containers/NewHabit"
 
 class App extends React.Component {
   state = {};
@@ -15,6 +17,8 @@ class App extends React.Component {
         <NavBar/>  
         <Switch>
           <Route exact path="/" component={Dashboard} />
+          <Route path="/login" component={Login} />
+          <Route path="/newHabit" component={NewHabit} />
           <Route path='/details/:id' component={DetailsCard}/>
           <Route path='/profile' component={Profile}/>
           <Route component={NotFound404} />
