@@ -8,6 +8,7 @@ import Profile from "./Containers/Profile";
 import NotFound404 from "./Containers/NotFound404"
 import Login from "./Containers/Login";
 import NewHabit from "./Containers/NewHabit"
+import NewUser from "./Containers/NewUser";
 
 class App extends React.Component {
   state = {};
@@ -18,6 +19,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route path="/login" component={Login} />
+          <Route path="/newUser" component={NewUser} />
           <Route path="/newHabit" component={NewHabit} />
           <Route path='/details/:id' component={DetailsCard}/>
           <Route path='/profile' component={Profile}/>
