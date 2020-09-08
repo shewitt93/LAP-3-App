@@ -16,6 +16,7 @@ export default class NewUser extends Component {
         if (this.state.password === this.state.passwordTwo)
             {
             console.log("you have created an account");
+            console.log("CONNECT TO DB");
             console.log(this.state);}
             else {
                 alert("The passwords do not match, please try again")
