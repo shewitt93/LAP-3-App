@@ -1,22 +1,20 @@
 import React from "react";
-import Dashboard from "./Containers/Dashboard"
-import "./styles/App.css";
+import ActiveSession from "./Containers/ActiveSession";
 import { Switch, Route } from 'react-router-dom';
-import DetailsCard from "./Components/DetailsCard";
-import NavBar from "./Components/NavBar"
-import Profile from "./Containers/Profile";
-import NotFound404 from "./Containers/NotFound404"
+import Login from "./Containers/Login";
+import NotFound404 from "./Containers/NotFound404";
+import NewUser from "./Containers/NewUser";
+
 
 class App extends React.Component {
   state = {};
   render() {
     return (
-      <>
-        <NavBar/>  
+      <>       
         <Switch>
-          <Route exact path="/" component={Dashboard} />
-          <Route path='/details/:id' component={DetailsCard}/>
-          <Route path='/profile' component={Profile}/>
+          <Route exact path="/" component={Login} />
+          <Route path="/newUser" component={NewUser} />
+          <Route path="/session" component={ActiveSession} />
           <Route component={NotFound404} />
         </Switch>
       </>
