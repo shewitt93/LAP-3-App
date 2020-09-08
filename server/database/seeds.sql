@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS activities;
 DROP TABLE IF EXISTS users;
 
 
@@ -5,7 +6,7 @@ CREATE TABLE users(
     id BIGSERIAL PRIMARY KEY NOT NULL,
     name VARCHAR(20) NOT NULL,
     email VARCHAR(200) NOT NULL,
-    password VARCHAR(50) NOT NULL,
+    password VARCHAR(200) NOT NULL,
     UNIQUE (email)
     
 );
@@ -18,7 +19,7 @@ INSERT INTO users (name, email, password) VALUES
 ;
 
 
-DROP TABLE IF EXISTS activities;
+
 
 CREATE TABLE activities(
     id serial PRIMARY KEY,
@@ -26,7 +27,7 @@ CREATE TABLE activities(
     description VARCHAR(500),
     streak int NOT NULL,
     latest_date date NOT NULL,
-    name_id int REFERENCES users (name_id)  NOT NULL
+    name_id int REFERENCES users (id)  NOT NULL
 );
 
 INSERT INTO activities (name, description, streak, latest_date, name_id) VALUES 
