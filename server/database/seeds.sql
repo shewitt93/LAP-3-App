@@ -2,17 +2,19 @@ DROP TABLE IF EXISTS users;
 
 
 CREATE TABLE users(
-    id serial PRIMARY KEY,
-    username VARCHAR(20) NOT NULL,
-    user_password VARCHAR(50) NOT NULL
+    id BIGSERIAL PRIMARY KEY NOT NULL,
+    name VARCHAR(20) NOT NULL,
+    email VARCHAR(200) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    UNIQUE (email)
     
 );
 
-INSERT INTO users (username, user_password) VALUES
-    ('Simon', 'enneneneenene'),
-    ('Atheer', 'hello'),
-    ('Mugisha', 'good'),
-    ('Jamie', 'morning')
+INSERT INTO users (name, email, password) VALUES
+    ('Simon', 'gfgd@gfdg.com', 'enneneneenene'),
+    ('Atheer','gd@gfdg.com', 'hello'),
+    ('Mugisha', 'fgd@gfdg.com', 'good'),
+    ('Jamie','d@gfdg.com', 'morning')
 ;
 
 
