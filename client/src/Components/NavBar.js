@@ -4,10 +4,16 @@ import '../styles/NavBar.css';
 
 export default function NavBar() {
     return (
-        <nav>
-            <NavLink className="navlink" to='/'>Home</NavLink>
-            <NavLink className="navlink" to='/profile'>Profile</NavLink>
-            <NavLink className="navlink" to='/logout'>Logout</NavLink>
-        </nav>
-    )
+      <nav>
+        <NavLink className="navlink" to="/session">
+          Dashboard
+        </NavLink>
+        <NavLink className="navlink" to="/session/profile">
+          Profile
+        </NavLink>
+            <NavLink className="navlink" to="/session/logout">
+          Logout
+        </NavLink>
+      </nav>
+    );
 }

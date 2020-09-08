@@ -37,7 +37,7 @@ export default class NewUser extends Component {
             </form>
                 <h2>Already have an account?</h2>
                 <br />
-                <Link to='/login'>Click here to Login</Link>
+                <Link to='/'>Click here to Login</Link>
             </>
         )
     }

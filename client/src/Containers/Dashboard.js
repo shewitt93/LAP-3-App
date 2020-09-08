@@ -9,7 +9,7 @@ class Dashboard extends Component {
         return (
             <>
                 <h1>{this.props.user.name}'s Dashboard</h1>
-                <Link to='/newHabit' >+</Link>
+                <Link to='/session/newHabit' >+</Link>
                 {this.props.user.habits.map((habit, idx) => <HabitCard idx={idx} key={idx} name={habit.name} streak={habit.streak}/> )}
                 <button>Complete All</button>
             </>
