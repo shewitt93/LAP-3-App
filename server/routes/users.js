@@ -7,14 +7,13 @@ const auth = require("../helpers/auth");
 
 //Register
 router.post("/register", emailcheck, async (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   try {
     const { email, name, password } = req.body;
 
     //does user exist
     const user = await pool.query("SELECT * FROM users WHERE email = $1", [
       email,
-      name,
     ]);
     if (user.rows.length !== 0) {
       return res.status(401).json("User already exists");
@@ -32,8 +31,10 @@ router.post("/register", emailcheck, async (req, res) => {
     );
 
     // auth token
+    // console.log(newUser.rows[0].id);
     const token = createToken(newUser.rows[0].id);
     res.json({ token });
+    // console.log(token);
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server Error");
@@ -41,6 +42,7 @@ router.post("/register", emailcheck, async (req, res) => {
 });
 
 router.post("/login", emailcheck, async (req, res) => {
+  console.log(req.body);
   try {
     const { email, password } = req.body;
     // does user exist
@@ -59,6 +61,7 @@ router.post("/login", emailcheck, async (req, res) => {
     // 4. give them the jwt token
     const token = createToken(user.rows[0].id);
     res.json({ token });
+    console.log(token);
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server Error");
