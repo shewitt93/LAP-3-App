@@ -4,6 +4,7 @@ import '../styles/NavBar.css';
 
 export default function NavBar() {
     return (
+      <div className="navContainer">
       <nav>
         <NavLink className="navlink" to="/session">
           Dashboard
@@ -15,5 +16,6 @@ export default function NavBar() {
           Logout
         </NavLink>
       </nav>
+      </div>
     );
 }
