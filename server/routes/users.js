@@ -52,7 +52,9 @@ router.post("/login", emailcheck, async (req, res) => {
     }
 
     const token = createToken(user.rows[0].id);
-    res.json({ token });
+    res.json({
+      token,
+    });
     console.log(token);
   } catch (err) {
     console.error(err.message);

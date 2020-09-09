@@ -25,7 +25,9 @@ export default class Login extends Component {
     };
 
     console.log(options);
-    fetch("http://localhost:3000/users/login", options).then((r) => r.json());
+    fetch("http://localhost:3000/users/login", options)
+      .then((r) => r.json())
+      .then((data) => localStorage.setItem("user", JSON.stringify(data)));
     //   .then((data) => {
     //     if (data.status) {
     //       console.log("Redirect");

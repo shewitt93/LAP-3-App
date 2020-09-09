@@ -31,8 +31,8 @@ CREATE TABLE activities(
 );
 
 INSERT INTO activities (name, description, streak, latest_date, name_id) VALUES 
-    ('water','Drink 8 glasses per day', 6, '2020-09-07',2),
-    ('water','Drink 10 glasses per day', 6, '2020-09-05',1),
+    ('water','Drink 8 glasses per day', 6, '2020-09-07',4),
+    ('water','Drink 10 glasses per day', 6, '2020-09-05',4),
     ('sleep','Sleep 8 hours a night', 8, '2020-09-07',2),
     ('exercise','Exercise 60 mins per day', 0, '2020-09-01',3),
     ('food','Eat 5 fruits and veg per day', 60, '2020-09-07',4)

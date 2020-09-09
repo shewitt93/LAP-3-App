@@ -32,6 +32,7 @@ export default class NewUser extends Component {
       // .catch(console.warn);
 
       console.log("CONNECT TO DB");
+
       //   console.log(options);
     } else {
       alert("The passwords do not match, please try again");

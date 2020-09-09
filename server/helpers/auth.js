@@ -3,7 +3,7 @@ require("dotenv").config();
 
 module.exports = async (req, res, next) => {
   try {
-    const jwtToken = req.header("header");
+    const jwtToken = req.header("token");
 
     if (!jwtToken) {
       return res.status(500).json("Please Register before accessing this");
