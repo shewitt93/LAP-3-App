@@ -10,19 +10,22 @@ export default class NewUser extends Component {
   };
 
   handleFormSubmit = (e) => {
+    let userData;
     e.preventDefault();
     if (this.state.password === this.state.passwordTwo) {
-      const userData = {
+      userData = {
         email: this.state.email,
         name: this.state.username,
         password: this.state.password,
-        password2: this.state.passwordTwo,
+        // password2: this.state.passwordTwo,
       };
       const options = {
         method: "POST",
+        headers: { "Content-type": "application/json" },
         body: JSON.stringify(userData),
       };
 
+      // console.log(options);
       fetch("http://localhost:3000/users/register", options);
       // .then((r) => r.json())
       // .then(addUser)
