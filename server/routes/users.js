@@ -7,6 +7,7 @@ const auth = require("../helpers/auth");
 
 //Register
 router.post("/register", emailcheck, async (req, res) => {
+  console.log(req.body);
   try {
     const { email, name, password } = req.body;
 

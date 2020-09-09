@@ -10,10 +10,13 @@ app.use(cors());
 app.use(express.json());
 // // Parses details from a form
 //Routes
-app.use("/users", require("./routes/users"));
+// app.use("/users", require("./routes/users"));
 
 app.use("/dashboard", require("./routes/dashboard"));
 //port listen
+app.post("/users/register", (req, res) => {
+  console.log(req.body);
+});
 
 app.get("/", (req, res) => {
   res.send("Express server running");
