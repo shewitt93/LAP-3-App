@@ -56,6 +56,7 @@ router.post("/login", emailcheck, async (req, res) => {
     const checkPassword = await bcrypt.compare(password, user.rows[0].password);
 
     if (!checkPassword) {
+      // res.json({ status: false });
       return res.status(401).json("Please try again");
     }
     // 4. give them the jwt token
@@ -64,6 +65,7 @@ router.post("/login", emailcheck, async (req, res) => {
     console.log(token);
   } catch (err) {
     console.error(err.message);
+
     res.status(500).send("Server Error");
   }
 });

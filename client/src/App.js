@@ -23,26 +23,3 @@ class App extends React.Component {
   }
 }
 export default App;
-
-// function App() {
-//   const authenticated = async () => {
-//     try {
-//       const res = await fetch("http://localhost:3000/users/authorised", {
-//         method: "GET",
-//         headers: { token: localStorage.token },
-//       });
-//       const isRes = await res.json();
-//       isRes === true ? setIsAuthenticated(true) : setIsAuthenticated(false);
-//     } catch (err) {
-//       console.log(err.message);
-//     }
-//   };
-//   useEffect(() => {
-//     authenticated();
-//   }, []);
-
-//   const [setIsAuthenticated, setIsAuthenticated] = useState(false);
-
-//   const setAuth = (boolean) => {
-//     setIsAuthenticated(boolean);
-//   };

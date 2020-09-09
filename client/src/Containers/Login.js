@@ -25,10 +25,14 @@ export default class Login extends Component {
     };
 
     console.log(options);
-    fetch("http://localhost:3000/users/login", options);
-    // .then((r) => r.json())
-    // .then(addUser)
-    // .catch(console.warn);
+    fetch("http://localhost:3000/users/login", options).then((r) => r.json());
+    //   .then((data) => {
+    //     if (data.status) {
+    //       console.log("Redirect");
+    //     } else {
+    //       console.log("Stay here");
+    //     }
+    //   });
 
     console.log("CONNECT TO DB");
   };
