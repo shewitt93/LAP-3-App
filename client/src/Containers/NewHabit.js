@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../styles/newHabit.css'
 
 class NewHabit extends Component {
     state = { name: "", description: "", frequency:null }
@@ -17,9 +18,11 @@ class NewHabit extends Component {
        
         return (
           <>
+          <div className='newHabitContainer'>
             <h1>New Habit</h1>
             <form onSubmit={this.handleSubmit}>
               <input
+                className='formInput'
                 required
                 type="text"
                 name="name"
@@ -28,6 +31,7 @@ class NewHabit extends Component {
               />
               <br />
               <input
+                className='formInput'
                 required
                 type="text area"
                 name="description"
@@ -36,6 +40,7 @@ class NewHabit extends Component {
               />
               <br />
               <input
+                className='formInput'
                 required
                 type="number"
                 name="frequency"
@@ -46,8 +51,9 @@ class NewHabit extends Component {
               />
               <br/>
                 
-              <input type="submit" value="Create Habit" />
+              <input className='createHabitButton' type="submit" value="Create Habit" />
             </form>
+            </div>
           </>
         );
     }
