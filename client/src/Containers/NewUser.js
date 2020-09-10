@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import '../styles/newUser.css';
+import "../styles/newUser.css";
 
 export default class NewUser extends Component {
   state = { username: "", email: "", password: "", passwordTwo: "" };
@@ -18,7 +18,6 @@ export default class NewUser extends Component {
         email: this.state.email,
         name: this.state.username,
         password: this.state.password,
-        // password2: this.state.passwordTwo,
       };
       const options = {
         method: "POST",
@@ -27,73 +26,82 @@ export default class NewUser extends Component {
       };
 
       // console.log(options);
-      fetch("http://localhost:3000/users/register", options);
-      // .then((r) => r.json())
-      // .then(addUser)
+      fetch("http://localhost:3000/users/register", options)
+        .then((r) => r.json())
+        .then((data) => {
+          alert(data);
+          if (data.includes("Welcome")) {
+            window.location = `/`;
+          }
+        });
       // .catch(console.warn);
 
       console.log("CONNECT TO DB");
 
       //   console.log(options);
     } else {
-      alert("The passwords do not match, please try again");
+      alert("Passwords do not match");
     }
   };
 
   render() {
     return (
       <>
-      <div className="registrastionPageContainer">
-        <form onSubmit={this.handleFormSubmit}>
-          <input
-            className="formInput"
-            required
-            type="text"
-            name="username"
-            placeholder="Username"
-            value={this.state.username}
-            onChange={this.handleInput}
-          />
-          <br />
-          <input
-            className="formInput"
-            required
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={this.state.email}
-            onChange={this.handleInput}
-          />
-          <br />
-          <input
-            className="formInput"
-            required
-            type="password"
-            name="password"
-            minLength="6"
-            placeholder="Password Minimum of 6 characters"
-            value={this.state.password}
-            onChange={this.handleInput}
-          />
-          <br />
-          <input
-            className="formInput"
-            required
-            type="password"
-            name="passwordTwo"
-            minLength="6"
-            placeholder="Re-enter Password"
-            value={this.state.passwordTwo}
-            onChange={this.handleInput}
-          />
-          <br />
-          <input className="registerButton" type="submit" value="Create Account" />
-        </form>
-        <div className="callToAction">
-        <h2>Already have an account?</h2>
-        <br />
-        <Link to="/">Click here to Login</Link>
-        </div>
+        <div className="registrastionPageContainer">
+          <form onSubmit={this.handleFormSubmit}>
+            <input
+              className="formInput"
+              required
+              type="text"
+              name="username"
+              placeholder="Username"
+              value={this.state.username}
+              onChange={this.handleInput}
+            />
+            <br />
+            <input
+              className="formInput"
+              required
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={this.state.email}
+              onChange={this.handleInput}
+            />
+            <br />
+            <input
+              className="formInput"
+              required
+              type="password"
+              name="password"
+              minLength="6"
+              placeholder="Password Minimum of 6 characters"
+              value={this.state.password}
+              onChange={this.handleInput}
+            />
+            <br />
+            <input
+              className="formInput"
+              required
+              type="password"
+              name="passwordTwo"
+              minLength="6"
+              placeholder="Re-enter Password"
+              value={this.state.passwordTwo}
+              onChange={this.handleInput}
+            />
+            <br />
+            <input
+              className="registerButton"
+              type="submit"
+              value="Create Account"
+            />
+          </form>
+          <div className="callToAction">
+            <h2>Already have an account?</h2>
+            <br />
+            <Link to="/">Click here to Login</Link>
+          </div>
         </div>
       </>
     );
