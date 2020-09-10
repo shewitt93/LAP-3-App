@@ -1,0 +1,33 @@
+.habitCardContainer {
+    background-color: whitesmoke;
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px;
+}
+
+
+.habitCardName {
+    color: orange;
+    padding: 1em;
+}
+
+.habitCardStreak {
+    color: sienna;
+    padding: 1em;
+}
+
+.completeButton {
+    background-color: green;
+    width: 50%;
+    margin: 5%;
+    padding: 1em;
+}
+
+.moreInfoButton {
+    background-color: indigo;
+    width: 50%;
+    margin: 5%;
+    padding: 1em;
+}

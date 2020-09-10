@@ -1,0 +1,24 @@
+.dashboardContainer {
+    height: 90vh;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    overflow: scroll;
+}
+
+.habitsContainer {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.completeAllButton {
+    background-color: green;
+    height: 10%;
+    width: 35%;
+    margin-top: 10%;
+}
