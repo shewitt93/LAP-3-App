@@ -22,7 +22,10 @@ class NewHabit extends Component {
     };
     const options = {
       method: "POST",
-      headers: { "Content-type": "application/json" },
+      headers: {
+        "Content-type": "application/json",
+        token: localStorage.getItem("user"),
+      },
       body: JSON.stringify(newHabit),
     };
 

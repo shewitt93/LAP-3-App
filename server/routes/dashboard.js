@@ -15,13 +15,14 @@ router.get("/", auth, async (req, res) => {
   }
 });
 
-router.post("/newhabit", async (req, res) => {
+router.post("/newhabit", auth, async (req, res) => {
+  console.log(req.user);
   try {
     const { name, description, latest_date } = req.body;
 
     const habit = await pool.query(
-      "INSERT INTO activities (name, description, streak, latest_date) VALUES ($1, $2, 0, $3)",
-      [name, description, latest_date]
+      "INSERT INTO activities (name, description, streak, latest_date, name_id) VALUES ($1, $2, 0, $3, $4)",
+      [name, description, latest_date, req.user]
     );
     res.json(habit);
   } catch (err) {
