@@ -1,8 +1,9 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
-import '../styles/NavBar.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "../styles/NavBar.css";
 
 export default function NavBar() {
+
     return (
       <div className="navContainer">
       <nav>
@@ -18,4 +19,5 @@ export default function NavBar() {
       </nav>
       </div>
     );
+
 }

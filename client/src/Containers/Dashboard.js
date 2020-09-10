@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import HabitCard from '../Components/HabitCard'
 import '../styles/dashboard.css'
@@ -20,7 +20,8 @@ class Dashboard extends Component {
             </>
         )
     }
+
 }
 
-const mSTP = state => ({user: state.user})
-export default connect(mSTP)(Dashboard)
+const mSTP = (state) => ({ user: state.user });
+export default connect(mSTP)(Dashboard);
