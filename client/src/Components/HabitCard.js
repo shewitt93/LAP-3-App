@@ -2,9 +2,14 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import "../styles/habitCard.css";
+import addStreak from "../Reducer/Reducer";
 
 class HabitCard extends Component {
+  state = {
+    counter: 0,
+  };
   handleSubmit = () => {
+    console.log(this.props.user);
     let card = {
       name: this.props.name,
       id: this.props.idx,
@@ -22,6 +27,9 @@ class HabitCard extends Component {
       }).catch(console.warn);
     }
   };
+  // handleClick = () => {
+  //     if (this.state.counter < this.props.frequency)
+  // }
 
   render() {
     return (
