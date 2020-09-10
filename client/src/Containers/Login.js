@@ -29,7 +29,7 @@ export default class Login extends Component {
     fetch("http://localhost:3000/users/login", options)
       .then((r) => r.json())
       .then((data) => {
-        if (data == "Please try again") {
+        if (data.length !== 143) {
           console.log("Unauthorised");
         } else {
           localStorage.setItem("user", data);
