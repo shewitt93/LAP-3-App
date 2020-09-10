@@ -25,6 +25,7 @@ CREATE TABLE activities(
     id serial PRIMARY KEY,
     name VARCHAR(20) NOT NULL,
     description VARCHAR(500),
+    
     streak int,
     latest_date date NOT NULL,
     name_id int REFERENCES users (id)  
