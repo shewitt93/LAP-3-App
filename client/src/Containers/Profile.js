@@ -16,5 +16,5 @@ class Profile extends Component {
     }
 }
 
-const mSTP = state => ({user: state.user})
+const mSTP = state => ({user: state})
 export default connect(mSTP)(Profile)
