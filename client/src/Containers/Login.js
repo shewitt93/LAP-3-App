@@ -13,8 +13,6 @@ export default class Login extends Component {
   handleFormSubmit = (e) => {
     e.preventDefault();
 
-    console.log(this.state);
-
     let LogIn = {
       email: this.state.username,
       password: this.state.password,
@@ -25,12 +23,11 @@ export default class Login extends Component {
       body: JSON.stringify(LogIn),
     };
 
-    console.log(options);
     fetch("http://localhost:3000/users/login", options)
       .then((r) => r.json())
       .then((data) => {
         if (data.length !== 143) {
-          console.log("Unauthorised");
+          alert(data)
         } else {
           localStorage.setItem("user", data);
           window.location = `/session`;
