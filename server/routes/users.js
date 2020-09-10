@@ -34,7 +34,7 @@ router.post("/register", emailcheck, async (req, res) => {
 });
 
 router.post("/login", emailcheck, async (req, res) => {
-  console.log(req.body);
+  
   try {
     const { email, password } = req.body;
 
@@ -42,7 +42,7 @@ router.post("/login", emailcheck, async (req, res) => {
       email,
     ]);
     if (user.rows.length === 0) {
-      return res.status(401).json("Password or Email is incorrect");
+      return res.status(401).json("Password or Email is incorrect"); //email not registered checking
     }
 
     const checkPassword = await bcrypt.compare(password, user.rows[0].password);

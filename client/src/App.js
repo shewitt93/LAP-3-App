@@ -24,10 +24,9 @@ class App extends React.Component {
       <>
         <Switch>
           <Route exact path="/" component={Login} />
-
           <Route path="/newUser" component={NewUser} />
-
           <PrivateRoute path="/session" component={ActiveSession} />
+
           <Route component={NotFound404} />
           {/* {this.state.isLogin ? (
             <button onClick={() => this.handleLogout()}>LOGOUT</button>

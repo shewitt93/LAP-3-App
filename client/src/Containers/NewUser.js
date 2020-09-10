@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import '../styles/newUser.css';
 
 export default class NewUser extends Component {
   state = { username: "", email: "", password: "", passwordTwo: "" };
@@ -42,8 +43,10 @@ export default class NewUser extends Component {
   render() {
     return (
       <>
+      <div className="registrastionPageContainer">
         <form onSubmit={this.handleFormSubmit}>
           <input
+            className="formInput"
             required
             type="text"
             name="username"
@@ -53,6 +56,7 @@ export default class NewUser extends Component {
           />
           <br />
           <input
+            className="formInput"
             required
             type="email"
             name="email"
@@ -62,6 +66,7 @@ export default class NewUser extends Component {
           />
           <br />
           <input
+            className="formInput"
             required
             type="password"
             name="password"
@@ -72,6 +77,7 @@ export default class NewUser extends Component {
           />
           <br />
           <input
+            className="formInput"
             required
             type="password"
             name="passwordTwo"
@@ -81,11 +87,14 @@ export default class NewUser extends Component {
             onChange={this.handleInput}
           />
           <br />
-          <input type="submit" value="Create Account" />
+          <input className="registerButton" type="submit" value="Create Account" />
         </form>
+        <div className="callToAction">
         <h2>Already have an account?</h2>
         <br />
         <Link to="/">Click here to Login</Link>
+        </div>
+        </div>
       </>
     );
   }
