@@ -34,7 +34,6 @@ router.post("/register", emailcheck, async (req, res) => {
 });
 
 router.post("/login", emailcheck, async (req, res) => {
-  
   try {
     const { email, password } = req.body;
 
