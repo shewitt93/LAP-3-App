@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/login.css";
 
 export default class Login extends Component {
-  state = { username: "", password: "" };
+  state = { email: "", password: "" };
 
   handleInput = (e) => {
     const { name, value } = e.target;
@@ -12,9 +12,10 @@ export default class Login extends Component {
 
   handleFormSubmit = (e) => {
     e.preventDefault();
+    this.setState({password:""})
 
     let LogIn = {
-      email: this.state.username,
+      email: this.state.email,
       password: this.state.password,
     };
     const options = {
@@ -44,9 +45,8 @@ export default class Login extends Component {
               required
               className="formInput"
               type="text"
-              name="username"
-              placeholder="Username"
-              value={this.state.nameInput}
+              name="email"
+              placeholder="E-mail"
               onChange={this.handleInput}
             />
             <br />
