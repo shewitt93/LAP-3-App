@@ -41,32 +41,31 @@ router.post("/login", emailcheck, async (req, res) => {
       email,
     ]);
     if (user.rows.length === 0) {
-      return res.status(401).json("Password or Email is incorrect"); //email not registered checking
+      return res.status(401).json("Email not registered"); //email not registered checking
     }
 
     const checkPassword = await bcrypt.compare(password, user.rows[0].password);
 
     if (!checkPassword) {
-      return res.status(401).json("Please try again");
+      return res.status(401).json("Incorrect Password");
     }
 
     const token = createToken(user.rows[0].id);
     res.json(token);
-    console.log(token);
+    console.log(`'${user.rows[0].name}' logged in`);
   } catch (err) {
     console.error(err.message);
-
-    res.status(500).send("Server Error");
+    res.status(500).json("Server Error");
   }
 });
 
-router.get("/users/authorised", auth, async (req, res) => {
-  try {
-    res.json(true);
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send("Server Error");
-  }
-});
+// router.get("/users/authorised", auth, async (req, res) => {
+//   try {
+//     res.json(true);
+//   } catch (err) {
+//     console.error(err.message);
+//     res.status(500).send("Server Error");
+//   }
+// });
 
 module.exports = router;
