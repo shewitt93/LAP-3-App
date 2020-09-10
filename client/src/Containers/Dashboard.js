@@ -28,16 +28,15 @@ class Dashboard extends Component {
               />
             ))}
           </div>
-          <button
-            className="completeAllButton"
-            onClick={() => this.props.addStreakAll()}
-          >
-            Complete All
-          </button>
+          <button className="completeAllButton">Complete All</button>
         </div>
       </>
     );
   }
 }
-const mSTP = (state) => ({ user: state.user });
-export default connect(mSTP, { addStreakAll })(Dashboard);
+
+const mSTP = (state) => ({ user: state });
+// const mDTP = (dispatch) => ({
+//   getAct: dispatch(() => getActivities()),
+// });
+export default connect(mSTP, { getActivities, getName })(Dashboard);
