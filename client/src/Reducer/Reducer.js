@@ -1,24 +1,3 @@
-// const initialState = {
-//   user: {
-//     id: 2,
-//     name: "Atheer",
-//     habits: [
-//       {
-//         name: "Water",
-//         description: "Drink 8 glasses per day",
-//         streak: 6,
-//         latest_date: "2020-09-07",
-//       },
-//       {
-//         name: "Sleep",
-//         description: "Sleep 8 hours a night",
-//         streak: 8,
-//         latest_date: "2020-09-07",
-//       },
-//     ],
-//   },
-// };
-
 const initState = { name: "User", habits: [] };
 
 function HabitReducer(state = initState, action) {
@@ -34,15 +13,32 @@ function HabitReducer(state = initState, action) {
         ...state.habits.slice(action.payload + 1),
       ];
       return { ...state, habits: newHabits };
+
+    case "ADD_STREAK":
+      // let id2 = state.user.habits[action.payload].streak;
+      let updatedHabit = state.user.habits[action.payload];
+      updatedHabit.streak += 1;
+      // let updatedStreak = state.user.habits[action.payload].streak += 1;
+      const EditedList = [
+        ...state.user.habits.slice(0, action.payload),
+        updatedHabit,
+        ...state.user.habits.slice(action.payload + 1),
+      ];
+      const newUser = state.user;
+      newUser.habits = EditedList;
+      return { ...state, user: newUser };
+    // case 'ADD_STREAK_ALL':
+    // let id3 = state.user.habits.streak;
+    // let updatedStreakAll = state.user.habits.streak += 1;
+    // const EditedListAll = [
+    //   ...state.user.habits.slice(0, id3),
+    //   updatedStreakAll,
+    //   ...state.user.habits.slice(id3 + 1),
+    // ];
+    // return { ...state, all: EditedListAll };
     default:
       return state;
   }
 }
-// const Reducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     default:
-//       return state;
-//   }
-// };
 
 export default HabitReducer;

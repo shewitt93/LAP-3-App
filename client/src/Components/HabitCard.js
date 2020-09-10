@@ -1,21 +1,25 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import "../styles/habitCard.css";
 
 class HabitCard extends Component {
-  deleteItem = (id) => {
-    let confirmDelete = window.confirm("delete Habit?");
+  handleSubmit = () => {
+    let card = {
+      name: this.props.name,
+      id: this.props.idx,
+    };
+
+    let confirmDelete = window.confirm("Delete Habit?");
     if (confirmDelete) {
-      fetch("http://localhost:3000/dashboard/", {
-        method: "delete",
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify({ id }),
-      })
-        .then((r) => r.json())
-        .then((item) => {
-          this.props.deleteItem(id);
-        })
-        .catch((err) => console.log(err));
+      fetch("http://localhost:3000/dashboard", {
+        method: "DELETE",
+        headers: {
+          "Content-type": "application/json",
+          token: localStorage.getItem("user"),
+        },
+        body: JSON.stringify(card),
+      }).catch(console.warn);
     }
   };
 
@@ -23,15 +27,20 @@ class HabitCard extends Component {
     return (
       <div className="habitCardContainer">
         <h2 className="habitCardName">Habit Name: {this.props.name}</h2>
-        <h2 className="habitCardStreak">Streak: {this.props.streak}</h2>
-        <button className="completeButton">Complete</button>
+        <h2 className="habitCardStreak">Streak: {this.props.streak} </h2>
+        {/* <button
+          className="completeButton"
+          onClick={() => this.props.addStreak(this.props.idx)}
+        >
+          Complete
+        </button> */}
         <button className="moreInfoButton">
-          <Link to={`/session/details/${this.props.idx}`}>More Info</Link>
+          <Link to={`/session/details/ ${this.props.idx}`}>More Info</Link>
         </button>
-        <button onClick={() => this.deleteItem(item.id)}>delete</button>
+        <button onClick={this.handleSubmit}>delete</button>
       </div>
     );
   }
 }
-
-export default HabitCard;
+const mSTP = (state) => ({ user: state.user });
+export default connect(mSTP, { addStreak })(HabitCard);

@@ -2,6 +2,7 @@ const loadActivities = (data) => ({
   type: "LOAD_ACTIVITIES",
   payload: data,
 });
+export const addStreak = (idx) => ({ type: "ADD_STREAK", payload: idx });
 
 const loadName = (data) => ({
   type: "LOAD_NAME",

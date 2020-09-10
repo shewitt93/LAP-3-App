@@ -12,13 +12,13 @@ class DetailsCard extends Component {
         <h1>{this.props.habit[id].name}</h1>
         <p>{this.props.habit[id].description}</p>
         <h2>Streak: {this.props.habit[id].streak}</h2>
-        <button
+        {/* <button
           onClick={() => {
             this.props.getHabitId(id);
           }}
         >
           Delete Habit
-        </button>
+        </button> */}
       </div>
     );
   }
