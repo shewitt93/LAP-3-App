@@ -5,20 +5,8 @@ import Login from "./Containers/Login";
 import NotFound404 from "./Containers/NotFound404";
 import NewUser from "./Containers/NewUser";
 import PrivateRoute from "./Components/PrivateRoute";
-import { isLogin, logout } from "./utils";
 
 class App extends React.Component {
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     isLogin: isLogin(),
-  //   };
-  // }
-  // handleLogout = () => {
-  //   logout();
-  //   this.setState({ isLogin: false });
-  // };
   render() {
     return (
       <>
@@ -28,11 +16,6 @@ class App extends React.Component {
           <PrivateRoute path="/session" component={ActiveSession} />
 
           <Route component={NotFound404} />
-          {/* {this.state.isLogin ? (
-            <button onClick={() => this.handleLogout()}>LOGOUT</button>
-          ) : (
-            <Link to="/">SIGN IN</Link>
-          )} */}
         </Switch>
       </>
     );

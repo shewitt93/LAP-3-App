@@ -19,16 +19,17 @@
 //   },
 // };
 
-const initState = { name: "Mugisha", habits: [] };
+const initState = { name: "User", habits: [] };
 
 function HabitReducer(state = initState, action) {
   let idx;
   switch (action.type) {
+    case "LOAD_NAME":
+      return { ...state, name: action.payload };
     case "LOAD_ACTIVITIES":
       return { ...state, habits: action.payload };
     case "delete_habit":
-      const lessHabits = state.habits.filter((d) => d.id !== action.payload);
-      return { ...state, habits: lessHabits };
+      return { ...state, habits: action.payload };
     default:
       return state;
   }

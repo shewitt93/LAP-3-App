@@ -15,6 +15,18 @@ router.get("/", auth, async (req, res) => {
   }
 });
 
+router.get("/name", auth, async (req, res) => {
+  try {
+    const user = await pool.query(`SELECT name from users where id = $1`, [
+      req.user,
+    ]);
+    res.json(user.rows[0].name);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("serv error");
+  }
+});
+
 router.post("/newhabit", auth, async (req, res) => {
   console.log(req.user);
   try {

@@ -3,10 +3,11 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import HabitCard from "../Components/HabitCard";
 import "../styles/dashboard.css";
-import { getActivities } from "../Actions/Actions";
+import { getActivities, getName } from "../Actions/Actions";
 
 class Dashboard extends Component {
   componentDidMount() {
+    this.props.getName();
     this.props.getActivities();
   }
 
@@ -37,4 +38,4 @@ const mSTP = (state) => ({ user: state });
 // const mDTP = (dispatch) => ({
 //   getAct: dispatch(() => getActivities()),
 // });
-export default connect(mSTP, { getActivities })(Dashboard);
+export default connect(mSTP, { getActivities, getName })(Dashboard);
