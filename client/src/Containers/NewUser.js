@@ -25,7 +25,7 @@ export default class NewUser extends Component {
         body: JSON.stringify(userData),
       };
 
-      // console.log(options);
+      
       fetch("http://localhost:3000/users/register", options)
         .then((r) => r.json())
         .then((data) => {
@@ -34,11 +34,11 @@ export default class NewUser extends Component {
             window.location = `/`;
           }
         });
-      // .catch(console.warn);
+      
 
       console.log("CONNECT TO DB");
 
-      //   console.log(options);
+      
     } else {
       alert("Passwords do not match");
     }
@@ -57,6 +57,7 @@ export default class NewUser extends Component {
               placeholder="Username"
               value={this.state.username}
               onChange={this.handleInput}
+              maxLength="20"
             />
             <br />
             <input
