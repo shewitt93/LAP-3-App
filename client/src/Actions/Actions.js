@@ -8,6 +8,11 @@ const loadName = (data) => ({
   payload: data,
 });
 
+const deleteHabit = (data) => ({
+  type: "DELETE_HABIT",
+  payload: data,
+});
+
 export const getActivities = () => {
   return async (dispatch) => {
     try {
@@ -46,22 +51,24 @@ export const getName = () => {
   };
 };
 
-export const deleteHabit = () => {
+export const getHabitId = (id) => {
   return async (dispatch) => {
-    try {
-      const options = {
-        method: "DELETE",
-        headers: {
-          "Content-type": "application/json",
-          token: localStorage.user,
-        },
-      };
-      const resp = await fetch(`http://localhost:3000/dashboard/`, options);
-      const hab = await resp.json();
-      dispatch(habitdelete(hab));
-    } catch (err) {
-      throw new Error(err.messsage);
-    }
+    //     try {
+    //       const options = {
+    //         method: "DELETE",
+    //         headers: {
+    //           "Content-type": "application/json",
+    //           token: localStorage.user,
+    //         },
+    //       };
+    //       const resp = await fetch(`http://localhost:3000/dashboard/`, options);
+
+    //       const hab = await resp.json();
+    //       // dispatch(deleteHabit(id));
+    //     } catch (err) {
+    //       throw new Error(err.messsage);
+    //     }
+    dispatch(deleteHabit(id));
   };
 };
 

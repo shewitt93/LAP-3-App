@@ -28,8 +28,12 @@ function HabitReducer(state = initState, action) {
       return { ...state, name: action.payload };
     case "LOAD_ACTIVITIES":
       return { ...state, habits: action.payload };
-    case "delete_habit":
-      return { ...state, habits: action.payload };
+    case "DELETE_HABIT":
+      const newHabits = [
+        ...state.habits.slice(0, action.payload),
+        ...state.habits.slice(action.payload + 1),
+      ];
+      return { ...state, habits: newHabits };
     default:
       return state;
   }

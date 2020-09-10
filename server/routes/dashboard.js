@@ -42,4 +42,17 @@ router.post("/newhabit", auth, async (req, res) => {
   }
 });
 
+router.delete("/", auth, async (req, res) => {
+  console.log(req.body);
+});
+
+// router.delete("/", auth, async (req, res) => {
+//   try {
+// console.log(req.body)
+// })
+// const habit = await pool.query(
+//   `DELETE FROM activities WHERE id = $1`
+// )
+// }
+
 module.exports = router;
