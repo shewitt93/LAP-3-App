@@ -13,6 +13,6 @@ module.exports = async (req, res, next) => {
     req.user = payload.user;
     next();
   } catch (err) {
-    return res.status(500).json("Please Register befre accessing this");
+    return res.status(500).json("Invalid Token");
   }
 };
