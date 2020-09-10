@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin:0;
+
+}
+
+body {
+    width: 100%;
+}
+
+.loginPageContainer {
+    height:100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: wheat;
+}
+
+form {
+    padding: 10%;
+    border-radius: 2rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.callToAction {
+    background-color: wheat;
+    position: relative;
+    bottom: -10%;
+}
+
+.formInput {
+    background-color: white;
+}
+
+.loginButton {
+    background-color: green;
+}
