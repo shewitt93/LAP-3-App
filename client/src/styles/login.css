@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: blue;
+    background-color: wheat;
 }
 
 form {
@@ -27,15 +27,15 @@ form {
 }
 
 .callToAction {
-    background-color: blueviolet;
+    background-color: wheat;
     position: relative;
     bottom: -10%;
 }
 
 .formInput {
-    background-color: brown;
+    background-color: white;
 }
 
 .loginButton {
-    background-color: yellow;
+    background-color: green;
 }
