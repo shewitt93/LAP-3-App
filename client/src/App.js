@@ -8,17 +8,17 @@ import PrivateRoute from "./Components/PrivateRoute";
 import { isLogin, logout } from "./utils";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {
-      isLogin: isLogin(),
-    };
-  }
-  handleLogout = () => {
-    logout();
-    this.setState({ isLogin: false });
-  };
+  //   this.state = {
+  //     isLogin: isLogin(),
+  //   };
+  // }
+  // handleLogout = () => {
+  //   logout();
+  //   this.setState({ isLogin: false });
+  // };
   render() {
     return (
       <>
@@ -27,13 +27,13 @@ class App extends React.Component {
 
           <Route path="/newUser" component={NewUser} />
 
-          <Route path="/session" component={ActiveSession} />
+          <PrivateRoute path="/session" component={ActiveSession} />
           <Route component={NotFound404} />
-          {this.state.isLogin ? (
+          {/* {this.state.isLogin ? (
             <button onClick={() => this.handleLogout()}>LOGOUT</button>
           ) : (
             <Link to="/">SIGN IN</Link>
-          )}
+          )} */}
         </Switch>
       </>
     );

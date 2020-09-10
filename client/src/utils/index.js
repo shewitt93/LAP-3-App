@@ -1,13 +1,13 @@
-const Token = localStorage.getItem("user");
+const TOKEN_KEY = localStorage.getItem("user");
 
 // export const login = () => {
 //   localStorage.setItem(Token, "testlogin");
 // };
 export const logout = () => {
-  localStorage.removeItem(Token);
+  localStorage.removeItem(TOKEN_KEY);
 };
 export const isLogin = () => {
-  if (localStorage.getItem("token")) {
+  if (TOKEN_KEY) {
     return true;
   }
   return false;

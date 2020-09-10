@@ -7,8 +7,16 @@ import NavBar from "../Components/NavBar";
 import Profile from "./Profile";
 import NotFound404 from "./NotFound404";
 import NewHabit from "./NewHabit";
+import { isLogin } from "../utils";
 
 class App extends React.Component {
+  // constructor(props) {
+  //   super(props);
+
+  //   this.state = {
+  //     isLogin: isLogin(),
+  //   };
+  // }
   render() {
     return (
       <>

@@ -31,10 +31,8 @@ export default class Login extends Component {
         if (data == "Please try again") {
           console.log("Unauthorised");
         } else {
-          localStorage.setItem(
-            "user",
-            JSON.stringify(data)
-          )((window.location = `/session`));
+          localStorage.setItem("user", JSON.stringify(data));
+          window.location = `/session`;
         }
       });
   };
