@@ -9,8 +9,6 @@ import NotFound404 from "./NotFound404";
 import NewHabit from "./NewHabit";
 
 class App extends React.Component {
-  state = {};
-
   render() {
     return (
       <>

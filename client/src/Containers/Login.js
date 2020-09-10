@@ -20,23 +20,23 @@ export default class Login extends Component {
     };
     const options = {
       method: "POST",
-      headers: { "Content-type": "application/json" },
+      headers: { "Content-type": "application/json", token: localStorage.user },
       body: JSON.stringify(LogIn),
     };
 
     console.log(options);
     fetch("http://localhost:3000/users/login", options)
       .then((r) => r.json())
-      .then((data) => localStorage.setItem("user", JSON.stringify(data)));
-    //   .then((data) => {
-    //     if (data.status) {
-    //       console.log("Redirect");
-    //     } else {
-    //       console.log("Stay here");
-    //     }
-    //   });
-
-    console.log("CONNECT TO DB");
+      .then((data) => {
+        if (data == "Please try again") {
+          console.log("Unauthorised");
+        } else {
+          localStorage.setItem(
+            "user",
+            JSON.stringify(data)
+          )((window.location = `/session`));
+        }
+      });
   };
 
   render() {
