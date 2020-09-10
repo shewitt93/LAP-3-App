@@ -16,7 +16,7 @@ INSERT INTO users
     (name, email, password)
 VALUES
     ('dog', 'dog@gmail.com', '$2b$10$hlE6eRv//VgUa7lIREtUbuRvyq8pqCr7Cu3mVtv757M4mcwHMKTT2'),
-    ('cat', 'cat@gmail.com', '2b$10$2HII6c6gvSH/uRdepQs.l.tkByZL8rhyoKkAGUw9ICPJjT.HPXoFS'),
+    ('cat', 'cat@gmail.com', '$2b$10$sMq2GR7ZERkJ/mEl0v/8sOy4Os0d1kLOkg6abEr0X4.HHYTBYZ8e6'),
     ('fox', 'fox@gmail.com', '$2b$10$hgI8NZMUzBINthsYgOUonOVbChinQ1Mm5DuqUaJa6MNuyfGGv0Xla'),
     ('lion', 'lion@gmail.com', '$2b$10$IOuxoVlzEerz27BDlsNwGOBt93zKhQ50w2arVgzGB5PSFLGnLE74u')
 ;
