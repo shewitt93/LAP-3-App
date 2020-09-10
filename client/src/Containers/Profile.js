@@ -19,5 +19,10 @@ class Profile extends Component {
   }
 }
 
+<<<<<<< HEAD
 const mSTP = (state) => ({ user: state.user });
 export default connect(mSTP)(Profile);
+=======
+const mSTP = state => ({user: state})
+export default connect(mSTP)(Profile)
+>>>>>>> 0d906c4fb4b1bcede40cd1c28d249ae8537ccb12
