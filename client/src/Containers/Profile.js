@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux';
-import '../styles/profile.css'
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import "../styles/profile.css";
 
 class Profile extends Component {
     render() {
@@ -11,10 +11,7 @@ class Profile extends Component {
               <h1 className="profileAvatar">👤</h1>
                 <h1>{this.props.user.name}</h1>
             <h2>Number of Active Habits: 
-              {/* {this.props.user.habits.length} */}
-              </h2>
-            <h2>Accumulated Current Streak: 
-              {/* {this.props.user.habits.reduce((a,b)=> a.streak + b.streak)} */}
+              {this.props.user.habits.length}
               </h2>
             </div>
             </div>
@@ -23,5 +20,5 @@ class Profile extends Component {
     }
 }
 
-const mSTP = state => ({user: state})
-export default connect(mSTP)(Profile)
+const mSTP = (state) => ({ user: state });
+export default connect(mSTP)(Profile);
