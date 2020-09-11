@@ -42,10 +42,12 @@ class HabitCard extends Component {
         >
           Complete
         </button>
+        <Link to={`/session/details/ ${this.props.idx}`}>
         <button className="moreInfoButton">
-          <Link to={`/session/details/ ${this.props.idx}`}>More Info</Link>
+          More Info
         </button>
-        <button onClick={this.handleSubmit}>delete</button>
+        </Link>
+        <button onClick={this.handleSubmit} className="deleteButton">delete</button>
       </div>
     );
   }
