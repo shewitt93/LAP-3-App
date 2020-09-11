@@ -27,6 +27,7 @@ class HabitCard extends Component {
         },
         body: JSON.stringify(card),
       }).catch(console.warn);
+      window.location.reload();
     }
   };
 
