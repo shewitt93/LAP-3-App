@@ -1,6 +1,6 @@
 .dashboardContainer {
     height: 90vh;
-    background-color: wheat;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,15 +10,31 @@
 }
 
 .habitsContainer {
-    background-color: green;
+    background-color: rgb(223, 219, 219);
     display: flex;
     justify-content: center;
     width: 80%;
+    border-radius: 1rem;
+    padding: 4rem;
 }
 
-.completeAllButton {
-    background-color: green;
-    height: 10%;
-    width: 35%;
-    margin-top: 10%;
+.newHabitCard {
+    background-color: whitesmoke;
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.newHabitButton {
+    font-size: 5rem;
+    color: green;
+}
+
+.dashboardTitle {
+    margin: 3rem;
 }

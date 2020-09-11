@@ -36,8 +36,8 @@ class NewHabit extends Component {
     return (
       <>
         <div className="newHabitContainer">
-          <h1>New Habit</h1>
           <form onSubmit={this.handleSubmit}>
+             <h1 className='formTitle'>New Habit</h1>
             <input
               className="formInput"
               required

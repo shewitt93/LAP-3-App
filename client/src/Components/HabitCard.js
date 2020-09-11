@@ -34,14 +34,14 @@ class HabitCard extends Component {
   render() {
     return (
       <div className="habitCardContainer">
-        <h2 className="habitCardName">Habit Name: {this.props.name}</h2>
-        <h2 className="habitCardStreak">Streak: {this.props.streak} </h2>
-        {/* <button
+        <h2>Name:<span className="habitCardName">{this.props.name}</span></h2>
+        <h2>Streak: <span className="habitCardStreak">{this.props.streak}</span> </h2>
+        <button
           className="completeButton"
           onClick={() => this.props.addStreak(this.props.idx)}
         >
           Complete
-        </button> */}
+        </button>
         <button className="moreInfoButton">
           <Link to={`/session/details/ ${this.props.idx}`}>More Info</Link>
         </button>
