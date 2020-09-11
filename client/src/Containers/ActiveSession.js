@@ -10,13 +10,6 @@ import NewHabit from "./NewHabit";
 import { isLogin } from "../utils";
 
 class App extends React.Component {
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     isLogin: isLogin(),
-  //   };
-  // }
   render() {
     return (
       <>

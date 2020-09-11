@@ -15,19 +15,26 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: wheat;
+    background-color: rgba(167, 167, 167, 0.747);
 }
 
 form {
     padding: 10%;
-    border-radius: 2rem;
-    background-color: black;
+    border-radius: 1rem;
+    background-color: white;
     display: flex;
     flex-direction: column;
+    padding:5rem 3rem;
+}
+
+.loginFormContainer {
+    height: 30%;
 }
 
 .callToAction {
-    background-color: wheat;
+    border-radius: 1em;
+    padding: 2em;
+    background-color: white;
     position: relative;
     bottom: -10%;
 }
@@ -37,5 +44,19 @@ form {
 }
 
 .loginButton {
-    background-color: green;
+    font-size: 2rem;
+    font-weight: 300;
+    border-radius: 0.2em;
+    border: solid grey 0.2px;
+    border-radius: 0.2em;
+    color: rgb(21, 156, 21);
+    cursor: pointer;
+}
+
+.clickHere {
+    color:green;
+}
+
+.clickHere:hover {
+    text-decoration: underline;
 }
