@@ -24,7 +24,9 @@ class Dashboard extends Component {
                 idx={idx}
                 key={idx}
                 name={habit.name}
+                frequency={habit.frequency}
                 streak={habit.streak}
+                date={habit.latest_date}
               />
             ))}
           </div>
