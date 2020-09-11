@@ -7,6 +7,11 @@
     align-items: center;
     min-height: 600px;
     overflow: scroll;
+    padding-bottom: 5em;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .habitsContainer {
@@ -14,15 +19,17 @@
     display: flex;
     justify-content: center;
     width: 80%;
+    flex-wrap: wrap;
     border-radius: 1rem;
     padding: 4rem;
-    overflow-y:hidden;
+    /* overflow-y:hidden; */
     overflow-x: auto;
 }
 
 .newHabitCard {
     background-color: whitesmoke;
     margin: 2em;
+    width: 22%;
     display: flex;
     flex-direction: column;
     align-items: center;
