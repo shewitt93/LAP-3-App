@@ -16,6 +16,8 @@
     width: 80%;
     border-radius: 1rem;
     padding: 4rem;
+    overflow-y:hidden;
+    overflow-x: auto;
 }
 
 .newHabitCard {
