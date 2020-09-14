@@ -5,29 +5,56 @@
     flex-direction: column;
     align-items: center;
     min-height: 300px;
+    border-radius: 1rem;
+    padding: 2rem;
 }
 
 
 .habitCardName {
-    color: orange;
+    color: rgb(6, 6, 180);
     padding: 1em;
 }
 
 .habitCardStreak {
-    color: sienna;
+    color: rgb(3, 156, 3);
     padding: 1em;
 }
 
 .completeButton {
-    background-color: green;
-    width: 50%;
-    margin: 5%;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.3rem;
+    border-radius: 0.2em;
+    border: solid grey 0.2px;
+    border-radius: 0.2em;
+    color: rgb(21, 156, 21);
+    cursor: pointer;
+    margin: 5em 0 2em 0;
     padding: 1em;
 }
 
 .moreInfoButton {
-    background-color: indigo;
-    width: 50%;
-    margin: 5%;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.3rem;
+    border-radius: 0.2em;
+    border: solid grey 0.2px;
+    border-radius: 0.2em;
+    color: blue;
+    cursor: pointer;
+    margin: 0 0 2em 0;
+    padding: 1em;
+}
+
+.deleteButton {
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.3rem;
+    border-radius: 0.2em;
+    border: solid grey 0.2px;
+    border-radius: 0.2em;
+    color: red;
+    cursor: pointer;
+    margin: 0 0 2em 0;
     padding: 1em;
 }

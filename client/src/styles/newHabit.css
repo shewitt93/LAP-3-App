@@ -1,5 +1,5 @@
 .newHabitContainer{
-    background-color: wheat;
+    background-color: rgb(238, 238, 238);
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -7,11 +7,21 @@
     align-items: center;
 }
 
+.formTitle {
+    margin-top: -3rem;
+    margin-bottom: 1em;
+}
 
 .formInput {
     background-color: wheat;
 }
 
 .createHabitButton {
-    background-color: green;
+    font-size: 2em;
+    font-weight: 300;
+    border-radius: 0.2em;
+    border: solid grey 0.2px;
+    border-radius: 0.2em;
+    color: rgb(21, 156, 21);
+    cursor: pointer;
 }

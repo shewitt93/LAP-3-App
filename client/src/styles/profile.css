@@ -1,8 +1,26 @@
-.profileContainer{
-    background-color: wheat;
+.profilePageContainer{
+    background-color: white;
     height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.profileContainer {
+    background-color: rgb(218, 218, 218);
+    height: 70%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3%;
+}
+
+.profileAvatar {
+        margin: 0.5em;
+        font-size: 10em;
+        background-color: white;
+        padding: 0.1em 0.5em;
+        border-radius: 3%;
 }

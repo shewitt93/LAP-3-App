@@ -27,6 +27,7 @@ class HabitCard extends Component {
         },
         body: JSON.stringify(card),
       }).catch(console.warn);
+      window.location.reload();
     }
   };
 
@@ -85,8 +86,8 @@ class HabitCard extends Component {
   render() {
     return (
       <div className="habitCardContainer">
-        <h2 className="habitCardName">Habit Name: {this.props.name}</h2>
-        <h2 className="habitCardStreak">Streak: {this.state.streak} </h2>
+        <h2>Name: <span className="habitCardName">{this.props.name}</span></h2>
+        <h2>Streak: <span className="habitCardStreak">{this.state.streak}</span> </h2>
         <h2 id="freq" className="habitCardFreq">
           Frequency: 0/{this.props.frequency}
         </h2>
@@ -97,11 +98,13 @@ class HabitCard extends Component {
         >
           Complete
         </button>
-        <h3>Last Completed: {this.props.date}</h3>
+        {/* <h3>Last Completed: {this.props.date}</h3> */}
+        <Link to={`/session/details/${this.props.idx}`}>
         <button className="moreInfoButton">
-          <Link to={`/session/details/${this.props.idx}`}>More Info</Link>
+          More Info
         </button>
-        <button onClick={this.handleSubmit}>delete</button>
+        </Link>
+        <button onClick={this.handleSubmit} className="deleteButton">delete</button>
       </div>
     );
   }

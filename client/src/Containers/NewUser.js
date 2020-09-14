@@ -101,7 +101,7 @@ export default class NewUser extends Component {
           <div className="callToAction">
             <h2>Already have an account?</h2>
             <br />
-            <Link to="/">Click here to Login</Link>
+            <Link to="/">Click <span className="clickHere">here</span> to Login</Link>
           </div>
         </div>
       </>

@@ -16,9 +16,11 @@ class Dashboard extends Component {
     return (
       <>
         <div className="dashboardContainer">
-          <h1>{this.props.user.name}'s Dashboard</h1>
-          <Link to="/session/newHabit">+</Link>
+          <h1 className="dashboardTitle">{this.props.user.name}'s Dashboard</h1>
           <div className="habitsContainer">
+          <div className="newHabitCard">
+                <Link to="/session/newHabit" className="newHabitButton">+</Link>
+              </div>
             {this.props.user.habits.map((habit, idx) => (
               <HabitCard
                 idx={idx}
@@ -27,10 +29,8 @@ class Dashboard extends Component {
                 frequency={habit.frequency}
                 streak={habit.streak}
                 date={habit.latest_date}
-              />
-            ))}
+              />))}
           </div>
-          <button className="completeAllButton">Complete All</button>
         </div>
       </>
     );

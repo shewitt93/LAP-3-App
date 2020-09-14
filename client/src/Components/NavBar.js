@@ -6,6 +6,7 @@ import { logout } from "../utils";
 export default function NavBar() {
   return (
     <div className="navContainer">
+      <div className="logo">🍏aDay</div>
       <nav>
         <NavLink className="navlink" to="/session">
           Dashboard

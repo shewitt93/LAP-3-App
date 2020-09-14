@@ -40,6 +40,7 @@ export default class Login extends Component {
     return (
       <>
         <div className="loginPageContainer">
+          <div className="loginFormContainer">
           <form onSubmit={this.handleFormSubmit}>
             <input
               required
@@ -65,7 +66,8 @@ export default class Login extends Component {
           <div className="callToAction">
             <h2>Not Registered yet?</h2>
             <br />
-            <Link to="/newUser">Click here to create an account</Link>
+            <Link to="/newUser">Click <span className="clickHere">here</span> to create an account</Link>
+          </div>
           </div>
         </div>
       </>
